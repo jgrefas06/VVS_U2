@@ -1,0 +1,338 @@
+[
+  {
+    "id": "TC-01",
+    "requisito": "RF-01",
+    "tecnica": "Equivalencia válida",
+    "datos": "20, 3, 0",
+    "entradas": [
+      20,
+      3,
+      0
+    ],
+    "esperado": 60,
+    "prioridad": "Alta",
+    "descripcion": "Subtotal con enteros"
+  },
+  {
+    "id": "TC-02",
+    "requisito": "RF-01",
+    "tecnica": "Equivalencia válida",
+    "datos": "19.99, 2, 0",
+    "entradas": [
+      19.99,
+      2,
+      0
+    ],
+    "esperado": 39.98,
+    "prioridad": "Alta",
+    "descripcion": "Subtotal con precio decimal"
+  },
+  {
+    "id": "TC-03",
+    "requisito": "RF-01 / RF-04",
+    "tecnica": "Límite",
+    "datos": "0, 3, 0",
+    "entradas": [
+      0,
+      3,
+      0
+    ],
+    "esperado": 0,
+    "prioridad": "Media",
+    "descripcion": "Precio cero permitido por RF-04"
+  },
+  {
+    "id": "TC-04",
+    "requisito": "RF-02",
+    "tecnica": "Equivalencia válida",
+    "datos": "100, 2, 25",
+    "entradas": [
+      100,
+      2,
+      25
+    ],
+    "esperado": 150,
+    "prioridad": "Alta",
+    "descripcion": "Descuento intermedio"
+  },
+  {
+    "id": "TC-05",
+    "requisito": "RF-02",
+    "tecnica": "Límite inferior",
+    "datos": "100, 2, 0",
+    "entradas": [
+      100,
+      2,
+      0
+    ],
+    "esperado": 200,
+    "prioridad": "Alta",
+    "descripcion": "Descuento de 0 %"
+  },
+  {
+    "id": "TC-06",
+    "requisito": "RF-02 / RF-03",
+    "tecnica": "Límite superior",
+    "datos": "100, 2, 100",
+    "entradas": [
+      100,
+      2,
+      100
+    ],
+    "esperado": 0,
+    "prioridad": "Alta",
+    "descripcion": "Descuento de 100 %"
+  },
+  {
+    "id": "TC-07",
+    "requisito": "RF-02 / RF-03",
+    "tecnica": "Próximo al límite",
+    "datos": "80, 1, 99.99",
+    "entradas": [
+      80,
+      1,
+      99.99
+    ],
+    "esperado": 0.01,
+    "prioridad": "Alta",
+    "descripcion": "Descuento 99.99 %"
+  },
+  {
+    "id": "TC-08",
+    "requisito": "RF-02 / RF-03",
+    "tecnica": "Equivalencia válida",
+    "datos": "10.01, 3, 33.33",
+    "entradas": [
+      10.01,
+      3,
+      33.33
+    ],
+    "esperado": 20.02,
+    "prioridad": "Media",
+    "descripcion": "Descuento con centavos"
+  },
+  {
+    "id": "TC-09",
+    "requisito": "RF-03",
+    "tecnica": "Redondeo",
+    "datos": "12.345, 1, 0",
+    "entradas": [
+      12.345,
+      1,
+      0
+    ],
+    "esperado": 12.35,
+    "prioridad": "Alta",
+    "descripcion": "Importe con tres decimales"
+  },
+  {
+    "id": "TC-10",
+    "requisito": "RF-03",
+    "tecnica": "Redondeo",
+    "datos": "0.1, 3, 0",
+    "entradas": [
+      0.1,
+      3,
+      0
+    ],
+    "esperado": 0.3,
+    "prioridad": "Media",
+    "descripcion": "Multiplicación decimal"
+  },
+  {
+    "id": "TC-11",
+    "requisito": "RF-03",
+    "tecnica": "Redondeo",
+    "datos": "1.001, 1, 0",
+    "entradas": [
+      1.001,
+      1,
+      0
+    ],
+    "esperado": 1,
+    "prioridad": "Media",
+    "descripcion": "Importe inferior a medio centavo"
+  },
+  {
+    "id": "TC-12",
+    "requisito": "RF-03",
+    "tecnica": "Límite",
+    "datos": "19.99, 1, 100",
+    "entradas": [
+      19.99,
+      1,
+      100
+    ],
+    "esperado": 0,
+    "prioridad": "Alta",
+    "descripcion": "Total nulo por descuento completo"
+  },
+  {
+    "id": "TC-13",
+    "requisito": "RF-04",
+    "tecnica": "Inválida / límite",
+    "datos": "-0.01, 1, 0",
+    "entradas": [
+      -0.01,
+      1,
+      0
+    ],
+    "esperado": "RangeError",
+    "prioridad": "Alta",
+    "descripcion": "Precio negativo"
+  },
+  {
+    "id": "TC-14",
+    "requisito": "RF-04",
+    "tecnica": "Inválida / límite",
+    "datos": "10, 0, 0",
+    "entradas": [
+      10,
+      0,
+      0
+    ],
+    "esperado": "RangeError",
+    "prioridad": "Alta",
+    "descripcion": "Cantidad cero"
+  },
+  {
+    "id": "TC-15",
+    "requisito": "RF-04",
+    "tecnica": "Equivalencia inválida",
+    "datos": "10, -1, 0",
+    "entradas": [
+      10,
+      -1,
+      0
+    ],
+    "esperado": "RangeError",
+    "prioridad": "Alta",
+    "descripcion": "Cantidad negativa"
+  },
+  {
+    "id": "TC-16",
+    "requisito": "RF-04",
+    "tecnica": "Fuera del límite",
+    "datos": "100, 1, -0.01",
+    "entradas": [
+      100,
+      1,
+      -0.01
+    ],
+    "esperado": "RangeError",
+    "prioridad": "Alta",
+    "descripcion": "Descuento negativo"
+  },
+  {
+    "id": "TC-17",
+    "requisito": "RF-04",
+    "tecnica": "Fuera del límite",
+    "datos": "100, 1, 100.01",
+    "entradas": [
+      100,
+      1,
+      100.01
+    ],
+    "esperado": "RangeError",
+    "prioridad": "Alta",
+    "descripcion": "Descuento superior a 100"
+  },
+  {
+    "id": "TC-18",
+    "requisito": "RF-05",
+    "tecnica": "Tipo inválido",
+    "datos": "\"10\", 1, 0",
+    "entradas": [
+      "10",
+      1,
+      0
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Precio texto numérico"
+  },
+  {
+    "id": "TC-19",
+    "requisito": "RF-05",
+    "tecnica": "Tipo inválido",
+    "datos": "10, null, 0",
+    "entradas": [
+      10,
+      null,
+      0
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Cantidad nula"
+  },
+  {
+    "id": "TC-20",
+    "requisito": "RF-05",
+    "tecnica": "Tipo inválido",
+    "datos": "10, 1, undefined",
+    "entradas": [
+      10,
+      1,
+      "__undefined__"
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Descuento ausente"
+  },
+  {
+    "id": "TC-21",
+    "requisito": "RF-05",
+    "tecnica": "No finito",
+    "datos": "NaN, 1, 0",
+    "entradas": [
+      "__NaN__",
+      1,
+      0
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Precio NaN"
+  },
+  {
+    "id": "TC-22",
+    "requisito": "RF-05",
+    "tecnica": "No finito",
+    "datos": "10, Infinity, 0",
+    "entradas": [
+      10,
+      "__Infinity__",
+      0
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Cantidad infinita"
+  },
+  {
+    "id": "TC-23",
+    "requisito": "RF-05",
+    "tecnica": "No finito",
+    "datos": "10, 1, -Infinity",
+    "entradas": [
+      10,
+      1,
+      "__-Infinity__"
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Descuento menos infinito"
+  },
+  {
+    "id": "TC-24",
+    "requisito": "RF-05",
+    "tecnica": "Tipo inválido",
+    "datos": "false, 1, 0",
+    "entradas": [
+      false,
+      1,
+      0
+    ],
+    "esperado": "TypeError",
+    "prioridad": "Alta",
+    "descripcion": "Precio booleano"
+  }
+]

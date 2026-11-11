@@ -1,0 +1,35 @@
+Confirmación posterior en Windows (11/11/2026): el comando npm.cmd run evidencias informó "inicial: Jest terminó con código 1. Evidencia guardada". Para obtener la traza completa de Jest sobre el módulo original se debe volver a ejecutar ese comando.
+
+VALIDACIÓN LOCAL CON NODE ASSERT (NO ES JEST)
+Etapa: inicial
+Fecha: 2026-11-11T19:04:32.220Z
+Node: v22.16.0 | SO: linux 6.18.57 | Arquitectura: x64
+Casos evaluados: 24
+---
+PASS TC-01 [RF-01] Subtotal con enteros
+PASS TC-02 [RF-01] Subtotal con precio decimal
+PASS TC-03 [RF-01 / RF-04] Precio cero permitido por RF-04
+PASS TC-04 [RF-02] Descuento intermedio
+PASS TC-05 [RF-02] Descuento de 0 %
+PASS TC-06 [RF-02 / RF-03] Descuento de 100 %
+FAIL TC-07 [RF-02 / RF-03] Descuento 99.99 % | esperado=0.01 | real=0.007999999999995566
+FAIL TC-08 [RF-02 / RF-03] Descuento con centavos | esperado=20.02 | real=20.021001000000002
+FAIL TC-09 [RF-03] Importe con tres decimales | esperado=12.35 | real=12.345
+FAIL TC-10 [RF-03] Multiplicación decimal | esperado=0.3 | real=0.30000000000000004
+FAIL TC-11 [RF-03] Importe inferior a medio centavo | esperado=1 | real=1.001
+PASS TC-12 [RF-03] Total nulo por descuento completo
+FAIL TC-13 [RF-04] Precio negativo | esperado=RangeError | real=-0.01
+FAIL TC-14 [RF-04] Cantidad cero | esperado=RangeError | real=0
+FAIL TC-15 [RF-04] Cantidad negativa | esperado=RangeError | real=-10
+FAIL TC-16 [RF-04] Descuento negativo | esperado=RangeError | real=100.01
+FAIL TC-17 [RF-04] Descuento superior a 100 | esperado=RangeError | real=-0.010000000000005116
+FAIL TC-18 [RF-05] Precio texto numérico | esperado=TypeError | real=10
+FAIL TC-19 [RF-05] Cantidad nula | esperado=TypeError | real=0
+FAIL TC-20 [RF-05] Descuento ausente | esperado=TypeError | real=NaN
+FAIL TC-21 [RF-05] Precio NaN | esperado=TypeError | real=NaN
+FAIL TC-22 [RF-05] Cantidad infinita | esperado=TypeError | real=NaN
+FAIL TC-23 [RF-05] Descuento menos infinito | esperado=TypeError | real=Infinity
+FAIL TC-24 [RF-05] Precio booleano | esperado=TypeError | real=0
+---
+Resumen local: 7 correctos, 17 fallidos, 24 totales.
+PENDIENTE: ejecutar Jest real después de instalar dependencias con npm install.

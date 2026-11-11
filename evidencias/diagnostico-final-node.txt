@@ -1,0 +1,33 @@
+VALIDACIÓN LOCAL CON NODE ASSERT (NO ES JEST)
+Etapa: final
+Fecha: 2026-11-11T19:23:13.784Z
+Node: v22.16.0 | SO: linux 6.18.57 | Arquitectura: x64
+Casos evaluados: 24
+---
+PASS TC-01 [RF-01] Subtotal con enteros
+PASS TC-02 [RF-01] Subtotal con precio decimal
+PASS TC-03 [RF-01 / RF-04] Precio cero permitido por RF-04
+PASS TC-04 [RF-02] Descuento intermedio
+PASS TC-05 [RF-02] Descuento de 0 %
+PASS TC-06 [RF-02 / RF-03] Descuento de 100 %
+PASS TC-07 [RF-02 / RF-03] Descuento 99.99 %
+PASS TC-08 [RF-02 / RF-03] Descuento con centavos
+PASS TC-09 [RF-03] Importe con tres decimales
+PASS TC-10 [RF-03] Multiplicación decimal
+PASS TC-11 [RF-03] Importe inferior a medio centavo
+PASS TC-12 [RF-03] Total nulo por descuento completo
+PASS TC-13 [RF-04] Precio negativo
+PASS TC-14 [RF-04] Cantidad cero
+PASS TC-15 [RF-04] Cantidad negativa
+PASS TC-16 [RF-04] Descuento negativo
+PASS TC-17 [RF-04] Descuento superior a 100
+PASS TC-18 [RF-05] Precio texto numérico
+PASS TC-19 [RF-05] Cantidad nula
+PASS TC-20 [RF-05] Descuento ausente
+PASS TC-21 [RF-05] Precio NaN
+PASS TC-22 [RF-05] Cantidad infinita
+PASS TC-23 [RF-05] Descuento menos infinito
+PASS TC-24 [RF-05] Precio booleano
+---
+Resumen local: 24 correctos, 0 fallidos, 24 totales.
+Este diagnóstico utiliza node:assert. Las evidencias de Jest se generan con npm.cmd run evidencias.

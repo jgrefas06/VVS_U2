@@ -1,0 +1,18 @@
+{
+  "name": "vvs-unidad2-tienda-digital",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Actividad de evaluación dinámica - Unidad 2 - Verificación y Validación de Software",
+  "main": "src/compras.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:inicial": "jest --runInBand --config jest.inicial.config.cjs",
+    "test:final": "jest --runInBand",
+    "evidencias": "node scripts/capturar-evidencias.cjs",
+    "diagnostico": "node scripts/diagnostico.cjs",
+    "rendimiento": "node scripts/rendimiento.cjs"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

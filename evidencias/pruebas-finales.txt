@@ -1,0 +1,37 @@
+RESULTADOS DE JEST - TRANSCRIPCIÓN DE LA TERMINAL DE WINDOWS
+Fecha comunicada: 11/11/2026
+Origen: salida compartida del comando npm.cmd test
+Nota: este texto recoge el resultado real comunicado desde VS Code. Se puede reemplazar por el registro completo generado por npm.cmd run evidencias.
+---
+PASS  tests/compras.test.js
+Unidad 2 - cálculo de compras - requisitos RF-01 a RF-05
+  √ TC-01 | RF-01 | Subtotal con enteros (1 ms)
+  √ TC-02 | RF-01 | Subtotal con precio decimal
+  √ TC-03 | RF-01 / RF-04 | Precio cero permitido por RF-04
+  √ TC-04 | RF-02 | Descuento intermedio
+  √ TC-05 | RF-02 | Descuento de 0 %
+  √ TC-06 | RF-02 / RF-03 | Descuento de 100 %
+  √ TC-07 | RF-02 / RF-03 | Descuento 99.99 %
+  √ TC-08 | RF-02 / RF-03 | Descuento con centavos
+  √ TC-09 | RF-03 | Importe con tres decimales
+  √ TC-10 | RF-03 | Multiplicación decimal
+  √ TC-11 | RF-03 | Importe inferior a medio centavo (1 ms)
+  √ TC-12 | RF-03 | Total nulo por descuento completo
+  √ TC-13 | RF-04 | Precio negativo (13 ms)
+  √ TC-14 | RF-04 | Cantidad cero
+  √ TC-15 | RF-04 | Cantidad negativa
+  √ TC-16 | RF-04 | Descuento negativo (1 ms)
+  √ TC-17 | RF-04 | Descuento superior a 100
+  √ TC-18 | RF-05 | Precio texto numérico
+  √ TC-19 | RF-05 | Cantidad nula (1 ms)
+  √ TC-20 | RF-05 | Descuento ausente
+  √ TC-21 | RF-05 | Precio NaN (1 ms)
+  √ TC-22 | RF-05 | Cantidad infinita
+  √ TC-23 | RF-05 | Descuento menos infinito
+  √ TC-24 | RF-05 | Precio booleano
+Test Suites: 1 passed, 1 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        0.526 s, estimated 1 s
+Ran all test suites.
+Salida de npm.cmd run evidencias: final: Jest terminó con código 0. Evidencia guardada.
